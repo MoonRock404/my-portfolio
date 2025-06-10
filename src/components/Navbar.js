@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './Navbar.css'; // optional if you want to separate styling later
+// import './Navbar.css'; // optional if you want to separate styling later
 
 function Navbar() {
   return (
