@@ -12,11 +12,8 @@ function Home() {
       
       {/* Left Side - Open Book Intro */}
       <div className="md:w-1/2 p-8 flex justify-center items-center bg-[#ede3d0] shadow-md relative">
-        <img
-          src="open-book.png"
-          alt="Open Book"
-          className="w-full max-w-md h-auto drop-shadow-xl"
-        />
+        <img src={`${process.env.PUBLIC_URL}/assets/open-book.png`} alt="Open Book" />
+
 
         {/* Book Text (split left and right pages) */}
         <div className="absolute top-16 left-12 w-1/2">
