@@ -6,46 +6,129 @@ npm run build
 npm run deploy
 */
 
+import styled from 'styled-components';
+import bookImage from '../assets/open-book.png';
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: serif;
+  background-color: #f8f4ed;
+  color: #3b2f2f;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const LeftPanel = styled.div`
+  width: 100%;
+  padding: 2rem;
+  background-color: #ede3d0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+`;
+
+const BookImage = styled.img`
+  width: 100%;
+  max-width: 500px;
+`;
+
+const BookTextLeft = styled.div`
+  position: absolute;
+  top: 4rem;
+  left: 3rem;
+  width: 45%;
+`;
+
+const BookTextRight = styled.div`
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+  width: 45%;
+`;
+
+const RightPanel = styled.div`
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #fffefc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+`;
+
+const ShelfHeader = styled.h2`
+  font-size: 1.75rem;
+  font-weight: bold;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: ${(props) => props.bg};
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const ButtonContainer = styled.div`
+  width: 100%;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
 function Home() {
   return (
-    <section className="flex flex-col md:flex-row min-h-screen bg-[#f8f4ed] text-[#3b2f2f] font-serif">
-      
-      {/* Left Side - Open Book Intro */}
-      <div className="md:w-1/2 p-8 flex justify-center items-center bg-[#ede3d0] shadow-md relative">
-        <img src={`${process.env.PUBLIC_URL}/assets/open-book.png`} alt="Open Book" />
-
-
-        {/* Book Text (split left and right pages) */}
-        <div className="absolute top-16 left-12 w-1/2">
-          <h1 className="text-3xl mb-4 font-bold">Hello, I'm Chandini</h1>
-        </div>
-        <div className="absolute top-16 right-12 w-1/2">
+    <Section>
+      {/* Left - Book */}
+      <LeftPanel>
+        <BookImage src={bookImage} alt="Open Book" />
+        <BookTextLeft>
+          <h1 style={{ fontSize: '1.875rem', marginBottom: '1rem', fontWeight: 'bold' }}>
+            Hello, I'm Chandini
+          </h1>
+        </BookTextLeft>
+        <BookTextRight>
           <p>
             A student exploring cybersecurity and software engineering, with a
-            love for storytelling and creativity.
+            love for creativity.
           </p>
-        </div>
-      </div>
+        </BookTextRight>
+      </LeftPanel>
 
-      {/* Right Side - Bookshelf Navigation */}
-      <div className="md:w-1/2 p-6 flex flex-col justify-evenly items-center bg-[#fffefc] space-y-6">
-        <h2 className="text-2xl font-bold mb-2">📚 Select a Shelf</h2>
-
-        {/* Shelf Buttons */}
-        <div className="space-y-4 w-full max-w-sm">
-          <button className="w-full py-4 bg-[#c9a97e] text-white rounded-xl shadow-lg hover:scale-105 transition">
-            🧪 Projects
-          </button>
-          <button className="w-full py-4 bg-[#b08f6c] text-white rounded-xl shadow-lg hover:scale-105 transition">
-            🛠️ Experience
-          </button>
-          <button className="w-full py-4 bg-[#a0816a] text-white rounded-xl shadow-lg hover:scale-105 transition">
-            🎖️ Certifications
-          </button>
-        </div>
-      </div>
-      
-    </section>
+      {/* Right - Shelf */}
+      <RightPanel>
+        <ShelfHeader>📚 Select a Shelf</ShelfHeader>
+        <ButtonContainer>
+          <Button bg="#c9a97e">🧪 Projects</Button>
+          <Button bg="#b08f6c">🛠️ Experience</Button>
+          <Button bg="#a0816a">🎖️ Certifications</Button>
+        </ButtonContainer>
+      </RightPanel>
+    </Section>
   );
 }
 
