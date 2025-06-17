@@ -7,7 +7,6 @@ npm run deploy
 */
 
 import styled from 'styled-components';
-import bookImage from '/Users/chandinichennakesavan/Projects/my-portfolio/public/assets';
 
 const Section = styled.section`
   display: flex;
@@ -105,7 +104,7 @@ function Home() {
     <Section>
       {/* Left - Book */}
       <LeftPanel>
-        <img src={`${process.env.PUBLIC_URL}/assets/open-book.png`} alt="Open Book" />
+        <img src="/assets/open-book.png" alt="Open book" />
         <BookTextLeft>
           <h1 style={{ fontSize: '1.875rem', marginBottom: '1rem', fontWeight: 'bold' }}>
             Hello, I'm Chandini
