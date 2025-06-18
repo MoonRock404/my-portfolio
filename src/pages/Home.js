@@ -45,7 +45,7 @@ const CenteredImageContainer = styled.div`
 
 const BookImage = styled.img`
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   height: auto;
 `;
 
