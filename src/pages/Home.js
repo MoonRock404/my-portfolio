@@ -36,22 +36,32 @@ const LeftPanel = styled.div`
   }
 `;
 
+const CenteredImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
 const BookImage = styled.img`
   width: 100%;
   max-width: 500px;
+  height: auto;
 `;
 
 const BookTextLeft = styled.div`
   position: absolute;
-  top: 4rem;
+  top: 50%;
   left: 3rem;
+  transform: translateY(-50%);
   width: 45%;
 `;
 
 const BookTextRight = styled.div`
   position: absolute;
-  top: 4rem;
+  top: 50%;
   right: 3rem;
+  transform: translateY(-50%);
   width: 45%;
 `;
 
@@ -104,11 +114,12 @@ function Home() {
     <Section>
       {/* Left - Book */}
       <LeftPanel>
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/open-book.png`}
-        alt="Open Book"
-        className="w-full max-w-md h-auto"
-      />
+        <CenteredImageContainer>
+          <BookImage
+            src={`${process.env.PUBLIC_URL}/assets/open-book.png`}
+            alt="Open Book"
+          />
+        </CenteredImageContainer>
         <BookTextLeft>
           <h1 style={{ fontSize: '1.875rem', marginBottom: '1rem', fontWeight: 'bold' }}>
             Hello, I'm Chandini
