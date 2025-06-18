@@ -104,7 +104,11 @@ function Home() {
     <Section>
       {/* Left - Book */}
       <LeftPanel>
-        <img src={`${process.env.PUBLIC_URL}/assets/open-book.png`} alt="Open Book" />
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/open-book.png`}
+        alt="Open Book"
+        className="w-full max-w-md h-auto"
+      />
         <BookTextLeft>
           <h1 style={{ fontSize: '1.875rem', marginBottom: '1rem', fontWeight: 'bold' }}>
             Hello, I'm Chandini
