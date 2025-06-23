@@ -90,35 +90,25 @@ const ShelfHeader = styled.h2`
 `;
 
 const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2.5rem;
-  padding: 2rem;
+  position: relative;
+  width: 100%;
   height: 100%;
 `;
 
 const Button = styled.button`
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  padding: 1.5rem 0.5rem;
-  background-color: ${(props) => props.bg || '#8b5e3c'};
-  color: white;
+  position: absolute;
+  background: transparent;
   border: none;
-  font-size: 1.2rem;
-  font-family: 'Georgia', serif;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
-
+  width: 100px;
+  height: 120px;
+  transition: transform 0.2s;
+  
   &:hover {
-    transform: rotate(180deg) scale(1.05);
-    background-color: #5a3e2b;
+    transform: scale(1.05);
   }
 `;
+
 
 
 function Home() {
@@ -149,10 +139,10 @@ function Home() {
       <RightPanel>
         <ShelfHeader>📚 Select a Shelf</ShelfHeader>
         <ButtonContainer>
-          <Button bg="#a0522d">📘 Projects</Button>
-          <Button bg="#8b5e3c">📕 Experience</Button>
-          <Button bg="#7b4b2a">📗 Certifications</Button>
-          <Button bg="#6b3e21">📙 Skills</Button>
+          <Button style={{ top: '60px', left: '20%' }} onClick={() => console.log('Projects')}></Button>
+          <Button style={{ top: '220px', left: '20%' }} onClick={() => console.log('Experience')} />
+          <Button style={{ top: '380px', left: '20%' }} onClick={() => console.log('Certifications')} />
+          <Button style={{ top: '540px', left: '20%' }} onClick={() => console.log('Skills')} />
         </ButtonContainer>
       </RightPanel>
     </Section>
