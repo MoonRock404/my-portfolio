@@ -89,29 +89,37 @@ const ShelfHeader = styled.h2`
   font-weight: bold;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2rem;
+  height: 100%;
+`;
+
 const Button = styled.button`
-  width: 100%;
-  padding: 1rem;
-  border-radius: 0.75rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  padding: 1.5rem 0.5rem;
+  background-color: ${(props) => props.bg || '#8b5e3c'};
   color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  background-color: ${(props) => props.bg};
+  border: none;
+  font-size: 1.2rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
 
   &:hover {
-    transform: scale(1.05);
+    transform: rotate(180deg) scale(1.05);
+    background-color: #5a3e2b;
   }
 `;
 
-const ButtonContainer = styled.div`
-  width: 100%;
-  max-width: 20rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
 
 function Home() {
   return (
@@ -141,9 +149,10 @@ function Home() {
       <RightPanel>
         <ShelfHeader>📚 Select a Shelf</ShelfHeader>
         <ButtonContainer>
-          <Button bg="#c9a97e">🧪 Projects</Button>
-          <Button bg="#b08f6c">🛠️ Experience</Button>
-          <Button bg="#a0816a">🎖️ Certifications</Button>
+          <Button bg="#a0522d">📘 Projects</Button>
+          <Button bg="#8b5e3c">📕 Experience</Button>
+          <Button bg="#7b4b2a">📗 Certifications</Button>
+          <Button bg="#6b3e21">📙 Skills</Button>
         </ButtonContainer>
       </RightPanel>
     </Section>
