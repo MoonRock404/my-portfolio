@@ -68,7 +68,10 @@ const BookTextRight = styled.div`
 const RightPanel = styled.div`
   width: 100%;
   padding: 1.5rem;
-  background-color: #fffefc;
+  background-image: url("${process.env.PUBLIC_URL}/assets/cozy-bookshelf.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -79,6 +82,7 @@ const RightPanel = styled.div`
     width: 50%;
   }
 `;
+
 
 const ShelfHeader = styled.h2`
   font-size: 1.75rem;
