@@ -101,7 +101,7 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   width: 300px;        /* wider button */
-  height: 120px;       /* adjust height as needed */
+  height: 110px;       /* adjust height as needed */
   transition: transform 0.2s;
   border-radius: 8px;
 
@@ -141,9 +141,9 @@ function Home() {
       <RightPanel>
         <ShelfHeader>📚 Select a Shelf</ShelfHeader>
         <ButtonContainer>
-          <Button style={{ top: '40px', left: '20%' }} onClick={() => console.log('Projects')}></Button>
-          <Button style={{ top: '210px', left: '20%' }} onClick={() => console.log('Experience')} />
-          <Button style={{ top: '390px', left: '20%' }} onClick={() => console.log('Certifications')} />
+          <Button style={{ top: '25px', left: '20%' }} onClick={() => console.log('Projects')}></Button>
+          <Button style={{ top: '205px', left: '20%' }} onClick={() => console.log('Experience')} />
+          <Button style={{ top: '395px', left: '20%' }} onClick={() => console.log('Certifications')} />
         </ButtonContainer>
       </RightPanel>
     </Section>
