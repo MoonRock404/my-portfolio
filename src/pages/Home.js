@@ -97,15 +97,17 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
   position: absolute;
-  background: transparent;
+  background: rgba(165, 117, 80, 0.2); /* light brown tint with transparency */
   border: none;
   cursor: pointer;
-  width: 100px;
-  height: 120px;
+  width: 140px;        /* wider button */
+  height: 120px;       /* adjust height as needed */
   transition: transform 0.2s;
-  
+  border-radius: 8px;
+
   &:hover {
     transform: scale(1.05);
+    background: rgba(165, 117, 80, 0.3); /* slightly darker on hover */
   }
 `;
 
