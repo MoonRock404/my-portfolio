@@ -24,10 +24,14 @@ const Section = styled.section`
 const LeftPanel = styled.div`
   width: 100%;
   padding: 2rem;
-  background-color: #ede3d0;
+  background-image: url("${process.env.PUBLIC_URL}/assets/vintage-page.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
