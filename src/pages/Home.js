@@ -100,7 +100,7 @@ const Button = styled.button`
   background: rgba(165, 117, 80, 0.2); /* light brown tint with transparency */
   border: none;
   cursor: pointer;
-  width: 700px;        /* wider button */
+  width: 600px;        /* wider button */
   height: 105px;       /* adjust height as needed */
   transition: transform 0.2s;
   border-radius: 8px;
