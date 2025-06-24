@@ -137,7 +137,6 @@ function Home() {
 
       {/* Right - Shelf */}
       <RightPanel>
-        <ShelfHeader>📚 Select a Shelf</ShelfHeader>
         <ButtonContainer>
           <Button style={{ top: '17px', left: '17%' }} onClick={() => console.log('Projects')}></Button>
           <Button style={{ top: '205px', left: '17%' }} onClick={() => console.log('Experience')} />
