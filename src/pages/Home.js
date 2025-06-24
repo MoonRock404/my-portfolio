@@ -104,7 +104,7 @@ const Button = styled.button`
   background: rgba(165, 117, 80, 0.2); /* light brown tint with transparency */
   border: none;
   cursor: pointer;
-  width: 600px;        /* wider button */
+  width: 400px;        /* wider button */
   height: 105px;       /* adjust height as needed */
   transition: transform 0.2s;
   border-radius: 8px;
@@ -122,12 +122,6 @@ function Home() {
     <Section>
       {/* Left - Book */}
       <LeftPanel>
-        <CenteredImageContainer>
-          <BookImage
-            src={`${process.env.PUBLIC_URL}/assets/open-book.png`}
-            alt="Open Book"
-          />
-        </CenteredImageContainer>
         <BookTextLeft>
           <h1 style={{ fontSize: '1.875rem', marginBottom: '1rem', fontWeight: 'bold' }}>
             Hello, I'm Chandini
