@@ -115,6 +115,28 @@ const Button = styled.button`
   }
 `;
 
+const AboutText = styled.div`
+  background-color: rgba(255, 248, 240, 0.8);
+  padding: 2rem;
+  max-width: 85%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(120, 80, 50, 0.15);
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  }
+`;
+
 
 
 function Home() {
@@ -122,17 +144,15 @@ function Home() {
     <Section>
       {/* Left - Book */}
       <LeftPanel>
-        <BookTextLeft>
-          <h1 style={{ fontSize: '1.875rem', marginBottom: '1rem', fontWeight: 'bold' }}>
-            Hello, I'm Chandini
-          </h1>
-        </BookTextLeft>
-        <BookTextRight>
+        <AboutText>
+          <h1>Hello, I'm Chandini</h1>
           <p>
-            A student exploring cybersecurity and software engineering, with a
-            love for creativity.
+            I'm a college student passionate about cybersecurity and software engineering. 
+            Beyond code, I love storytelling, design, and bringing whimsical, vintage themes 
+            to life through tech. This space is my creative portfolio—built with love and a 
+            little magic.
           </p>
-        </BookTextRight>
+        </AboutText>
       </LeftPanel>
 
       {/* Right - Shelf */}
