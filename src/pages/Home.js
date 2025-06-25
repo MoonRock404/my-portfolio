@@ -145,12 +145,11 @@ function Home() {
       {/* Left - Book */}
       <LeftPanel>
         <AboutText>
-          <h1>Hello, I'm Chandini</h1>
+          <h1>Hello, I'm Chandini!</h1>
           <p>
-            I'm a college student passionate about cybersecurity and software engineering. 
-            Beyond code, I love storytelling, design, and bringing whimsical, vintage themes 
-            to life through tech. This space is my creative portfolio—built with love and a 
-            little magic.
+            I'm a student at the University of Illinois at Urbana Champaign majoring in 
+            Computer Science and Anthropology passionate about cybersecurity and software engineering. 
+            This space is my creative portfolio—built with love and a little magic.
           </p>
         </AboutText>
       </LeftPanel>
