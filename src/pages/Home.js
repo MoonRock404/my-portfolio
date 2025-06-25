@@ -138,9 +138,9 @@ function Home() {
       {/* Right - Shelf */}
       <RightPanel>
         <ButtonContainer>
-          <Button style={{ top: '80px', left: '17%' }} onClick={() => console.log('Projects')}></Button>
-          <Button style={{ top: '280px', left: '17%' }} onClick={() => console.log('Experience')} />
-          <Button style={{ top: '440px', left: '17%' }} onClick={() => console.log('Certifications')} />
+          <Button style={{ top: '120px', left: '17%' }} onClick={() => console.log('Projects')}></Button>
+          <Button style={{ top: '320px', left: '17%' }} onClick={() => console.log('Experience')} />
+          <Button style={{ top: '460px', left: '17%' }} onClick={() => console.log('Certifications')} />
         </ButtonContainer>
       </RightPanel>
     </Section>
