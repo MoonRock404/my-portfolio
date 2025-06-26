@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavbarContainer = styled.nav`
-  height: 100px;
-  max-width: 1000px;
   margin: 1rem auto;
   padding: 0 2rem;
   background-image: url("${process.env.PUBLIC_URL}/assets/dark-parchment.png");
