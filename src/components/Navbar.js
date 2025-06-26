@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // Styled Components
 const NavBar = styled.nav`
+  height: 120px; /* Increase header height */
   width: 100%;
   background-color: #f4e9d8; /* parchment tone */
   background-image: url("${process.env.PUBLIC_URL}/assets/parchment-texture.png");
