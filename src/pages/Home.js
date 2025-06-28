@@ -204,6 +204,65 @@ const Description = styled.p`
   font-size: 0.95rem;
 `;
 
+const ProjectsSection = styled.section`
+  background-image: url("${process.env.PUBLIC_URL}/assets/parchment-dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4rem 2rem;
+  font-family: 'Georgia', serif;
+  color: #3b2f2f;
+  border: 4px solid #d0c1a1;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
+`;
+
+const ProjectGrid = styled.div`
+  display: grid;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+`;
+
+const ProjectCard = styled.div`
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(100, 70, 50, 0.1);
+`;
+
+const CertificationsSection = styled.section`
+  background-color: #f9f4e8;
+  background-image: url("${process.env.PUBLIC_URL}/assets/parchment-dark.png");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  font-family: 'Georgia', serif;
+  color: #3b2f2f;
+  border-radius: 1rem;
+  border: 4px double #cbb89d;
+  margin-top: 2rem;
+`;
+
+const CertList = styled.ul`
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
+const CertItem = styled.li`
+  padding: 1rem;
+  border-bottom: 1px solid #b49c82;
+  font-size: 1.05rem;
+
+  &:before {
+    content: '🎖️ ';
+  }
+`;
+
 function Home() {
   return (
     <>
@@ -265,6 +324,44 @@ function Experience() {
         </Entry>
       </Timeline>
     </ExperienceSection>
+  );
+}
+
+function Projects() {
+  return (
+    <ProjectsSection id="projects">
+      <h2 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>
+        🧪 Projects
+      </h2>
+      <ProjectGrid>
+        <ProjectCard>
+          <h3>PrarieLearn Extention</h3>
+          <p>A React-based app with 2FA and secure session handling.</p>
+        </ProjectCard>
+        <ProjectCard>
+          <h3>Ad Sentiment Analyzer</h3>
+          <p>Classifies user sentiment from ad comments using Python NLP.</p>
+        </ProjectCard>
+        <ProjectCard>
+          <h3>Dropout Predictor</h3>
+          <p>Used decision trees to analyze and predict high school dropout rates.</p>
+        </ProjectCard>
+      </ProjectGrid>
+    </ProjectsSection>
+  );
+}
+
+function Certifications() {
+  return (
+    <CertificationsSection id="certifications">
+      <h2 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>
+        🎖️ Certifications
+      </h2>
+      <CertList>
+        <CertItem>ISC² Certified in Cybersecurity</CertItem>
+        <CertItem>Google IT Support Professional Certificate</CertItem>
+      </CertList>
+    </CertificationsSection>
   );
 }
 
