@@ -137,33 +137,119 @@ const AboutText = styled.div`
   }
 `;
 
+const ExperienceSection = styled.section`
+  background-color: #f8f4ed;
+  background-image: url("${process.env.PUBLIC_URL}/assets/parchment-dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4rem 2rem;
+  font-family: 'Georgia', serif;
+  color: #3b2f2f;
+`;
 
+const Timeline = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid #a08c72;
+`;
+
+const Entry = styled.div`
+  position: relative;
+
+  &::before {
+    content: '📍';
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    font-size: 1.5rem;
+  }
+`;
+
+const Year = styled.h3`
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #6b4e2e;
+`;
+
+const Role = styled.h4`
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+`;
+
+const Description = styled.p`
+  margin: 0;
+  font-size: 0.95rem;
+`;
 
 function Home() {
   return (
-    <Section>
-      {/* Left - Book */}
-      <LeftPanel>
-        <AboutText>
-          <h1>Hello, I'm Chandini!</h1>
-          <p>
-            I'm a student at the University of Illinois at Urbana Champaign majoring in 
-            Computer Science and Anthropology passionate about cybersecurity and software engineering. 
-            This is my portfolio, built with love and a little creativity. Click on the buttons to the
-            right to explore more!""
-          </p>
-        </AboutText>
-      </LeftPanel>
+    <>
+      <Section>
+        {/* Left - Book */}
+        <LeftPanel>
+          <AboutText>
+            <h1>Hello, I'm Chandini!</h1>
+            <p>
+              I'm a student at the University of Illinois at Urbana-Champaign majoring in 
+              Computer Science and Anthropology passionate about cybersecurity and software engineering. 
+              This is my portfolio, built with love and a little creativity. Click on the buttons to the
+              right to explore more!
+            </p>
+          </AboutText>
+        </LeftPanel>
 
-      {/* Right - Shelf */}
-      <RightPanel>
-        <ButtonContainer>
-          <Button style={{ top: '73px', left: '17%' }} onClick={() => console.log('Projects')}></Button>
-          <Button style={{ top: '267px', left: '17%' }} onClick={() => console.log('Experience')} />
-          <Button style={{ top: '462px', left: '17%' }} onClick={() => console.log('Certifications')} />
-        </ButtonContainer>
-      </RightPanel>
-    </Section>
+        {/* Right - Shelf */}
+        <RightPanel>
+          <ButtonContainer>
+            <Button style={{ top: '73px', left: '17%' }} onClick={() => {
+              const el = document.getElementById('experience');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}></Button>
+
+            <Button style={{ top: '267px', left: '17%' }} onClick={() => console.log('Experience')} />
+            <Button style={{ top: '462px', left: '17%' }} onClick={() => console.log('Certifications')} />
+          </ButtonContainer>
+        </RightPanel>
+      </Section>
+      <Experience />
+    </>
+  );
+}
+
+
+function Experience() {
+  return (
+    <ExperienceSection id="experience">
+      <h2 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>
+        📖 My Chronicle of Experience
+      </h2>
+
+      <Timeline>
+        <Entry>
+          <Year>2024</Year>
+          <Role>Examples</Role>
+          <Description>
+            Built threat monitoring scripts, analyzed network logs, and contributed to vulnerability assessments.
+          </Description>
+        </Entry>
+
+        <Entry>
+          <Year>2023</Year>
+          <Role> Sales Partner @ Brighton Collectibles</Role>
+          <Description>
+            Sales stuff!
+          </Description>
+        </Entry>
+      </Timeline>
+    </ExperienceSection>
   );
 }
 
