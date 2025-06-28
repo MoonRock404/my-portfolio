@@ -138,26 +138,41 @@ const AboutText = styled.div`
 `;
 
 const ExperienceSection = styled.section`
-  background-color: #f8f4ed;
-  background-image: url("${process.env.PUBLIC_URL}/assets/parchment-dark.png");
+  background-image: url("${process.env.PUBLIC_URL}/assets/vintage-page.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 4rem 2rem;
   font-family: 'Georgia', serif;
   color: #3b2f2f;
+  border: 4px solid #bfae9c;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+  border-radius: 1rem;
 `;
 
+
 const Timeline = styled.div`
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px dashed #a08c72;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  padding-left: 2rem;
-  border-left: 3px solid #a08c72;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(to bottom, #d9b899 0%, transparent 100%);
+  }
 `;
+
 
 const Entry = styled.div`
   position: relative;
