@@ -292,9 +292,12 @@ function Home() {
             <Button style={{ top: '462px', left: '17%' }} onClick={() => console.log('Certifications')} />
           </ButtonContainer>
         </RightPanel>
-      </Section>
+        </Section>
       <Experience />
+      <Projects />
+      <Certifications />
     </>
+
   );
 }
 
