@@ -1,13 +1,12 @@
 /* 
-git add .
-git commit -m "Message"
-git push
-npm run build
-npm run deploy
+ git add .
+ git commit -m "Message"
+ git push
+ npm run build
+ npm run deploy
 */
 
 import styled from 'styled-components';
-import React from 'react';
 
 const Section = styled.section`
   display: flex;
@@ -88,112 +87,18 @@ const AboutText = styled.div`
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(120, 80, 50, 0.15);
   text-align: center;
-`;
 
-const ExperienceSection = styled.section`
-  background-image: url("${process.env.PUBLIC_URL}/assets/vintage-page.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 4rem 2rem;
-  color: #3b2f2f;
-  border: 4px solid #bfae9c;
-  box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
-  margin-top: 2rem;
-  border-radius: 1rem;
-`;
-
-const Timeline = styled.div`
-  position: relative;
-  padding-left: 2rem;
-  border-left: 3px dashed #a08c72;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-`;
-
-const Entry = styled.div`
-  position: relative;
-
-  &::before {
-    content: '📍';
-    position: absolute;
-    left: -2rem;
-    top: 0;
-    font-size: 1.5rem;
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
   }
-`;
 
-const Year = styled.h3`
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  color: #6b4e2e;
-`;
-
-const Role = styled.h4`
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-`;
-
-const Description = styled.p`
-  margin: 0;
-  font-size: 0.95rem;
-`;
-
-const ProjectsSection = styled.section`
-  background-image: url("${process.env.PUBLIC_URL}/assets/parchment-dark.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 4rem 2rem;
-  border: 4px solid #d0c1a1;
-  border-radius: 1rem;
-  margin-top: 2rem;
-`;
-
-const ProjectGrid = styled.div`
-  display: grid;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-`;
-
-const ProjectCard = styled.div`
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(100, 70, 50, 0.1);
-`;
-
-const CertificationsSection = styled.section`
-  background-image: url("${process.env.PUBLIC_URL}/assets/parchment-dark.png");
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 2rem;
-  border-radius: 1rem;
-  border: 4px double #cbb89d;
-  margin-top: 2rem;
-`;
-
-const CertList = styled.ul`
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-const CertItem = styled.li`
-  padding: 1rem;
-  border-bottom: 1px solid #b49c82;
-  font-size: 1.05rem;
-
-  &:before {
-    content: '🎖️ ';
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   }
 `;
 
@@ -205,28 +110,37 @@ function Home() {
           <AboutText>
             <h1>Hello, I'm Chandini!</h1>
             <p>
-              I'm a student at UIUC majoring in Computer Science + Anthropology, passionate about cybersecurity and software engineering.
+              I'm a student at the University of Illinois at Urbana-Champaign majoring in 
+              Computer Science and Anthropology passionate about cybersecurity and software engineering. 
+              This is my portfolio, built with love and a little creativity. Click on the buttons to the
+              right to explore more!
             </p>
           </AboutText>
         </LeftPanel>
+
         <RightPanel>
           <ButtonContainer>
             <Button style={{ top: '73px', left: '17%' }} onClick={() => {
-              document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
-            }} />
+              const el = document.getElementById('experience');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}></Button>
+
             <Button style={{ top: '267px', left: '17%' }} onClick={() => {
-              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              const el = document.getElementById('projects');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
             }} />
+
             <Button style={{ top: '462px', left: '17%' }} onClick={() => {
-              document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' });
+              const el = document.getElementById('certifications');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
             }} />
           </ButtonContainer>
         </RightPanel>
       </Section>
 
-      <Experience />
-      <Projects />
-      <Certifications />
+      <div id="experience"></div>
+      <div id="projects"></div>
+      <div id="certifications"></div>
     </>
   );
 }
@@ -238,7 +152,7 @@ function Experience() {
       <Timeline>
         <Entry>
           <Year>2024</Year>
-          <Role>Cybersecurity Intern @ SecureNet</Role>
+          <Role>Internship</Role>
           <Description>Worked on network logs and vulnerability assessments.</Description>
         </Entry>
         <Entry>
