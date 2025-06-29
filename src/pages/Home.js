@@ -138,9 +138,10 @@ function Home() {
         </RightPanel>
       </Section>
 
-      <div id="experience"></div>
-      <div id="projects"></div>
-      <div id="certifications"></div>
+      <div id="experience"><Experience /></div>
+      <div id="projects"><Projects /></div>
+      <div id="certifications"><Certifications /></div>
+
     </>
   );
 }
