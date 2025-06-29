@@ -7,6 +7,7 @@ npm run deploy
 */
 
 import styled from 'styled-components';
+import React from 'react';
 
 const Section = styled.section`
   display: flex;
@@ -40,35 +41,6 @@ const LeftPanel = styled.div`
   }
 `;
 
-const CenteredImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`;
-
-const BookImage = styled.img`
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-`;
-
-const BookTextLeft = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 3rem;
-  transform: translateY(-50%);
-  width: 45%;
-`;
-
-const BookTextRight = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 3rem;
-  transform: translateY(-50%);
-  width: 45%;
-`;
-
 const RightPanel = styled.div`
   width: 100%;
   padding: 1.5rem;
@@ -87,12 +59,6 @@ const RightPanel = styled.div`
   }
 `;
 
-
-const ShelfHeader = styled.h2`
-  font-size: 1.75rem;
-  font-weight: bold;
-`;
-
 const ButtonContainer = styled.div`
   position: relative;
   width: 100%;
@@ -101,17 +67,17 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
   position: absolute;
-  background: rgba(165, 117, 80, 0.2); /* light brown tint with transparency */
+  background: rgba(165, 117, 80, 0.2);
   border: none;
   cursor: pointer;
-  width: 440px;        /* wider button */
-  height: 105px;       /* adjust height as needed */
+  width: 440px;
+  height: 105px;
   transition: transform 0.2s;
   border-radius: 8px;
 
   &:hover {
     transform: scale(1.05);
-    background: rgba(165, 117, 80, 0.3); /* slightly darker on hover */
+    background: rgba(165, 117, 80, 0.3);
   }
 `;
 
@@ -122,19 +88,6 @@ const AboutText = styled.div`
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(120, 80, 50, 0.15);
   text-align: center;
-
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    font-family: 'Georgia', serif;
-  }
-
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  }
 `;
 
 const ExperienceSection = styled.section`
@@ -143,14 +96,12 @@ const ExperienceSection = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   padding: 4rem 2rem;
-  font-family: 'Georgia', serif;
   color: #3b2f2f;
   border: 4px solid #bfae9c;
   box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
   margin-top: 2rem;
   border-radius: 1rem;
 `;
-
 
 const Timeline = styled.div`
   position: relative;
@@ -161,18 +112,7 @@ const Timeline = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10px;
-    bottom: 0;
-    width: 5px;
-    background: linear-gradient(to bottom, #d9b899 0%, transparent 100%);
-  }
 `;
-
 
 const Entry = styled.div`
   position: relative;
@@ -210,12 +150,9 @@ const ProjectsSection = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   padding: 4rem 2rem;
-  font-family: 'Georgia', serif;
-  color: #3b2f2f;
   border: 4px solid #d0c1a1;
   border-radius: 1rem;
   margin-top: 2rem;
-  box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
 `;
 
 const ProjectGrid = styled.div`
@@ -234,13 +171,10 @@ const ProjectCard = styled.div`
 `;
 
 const CertificationsSection = styled.section`
-  background-color: #f9f4e8;
   background-image: url("${process.env.PUBLIC_URL}/assets/parchment-dark.png");
   background-size: cover;
   background-position: center;
   padding: 4rem 2rem;
-  font-family: 'Georgia', serif;
-  color: #3b2f2f;
   border-radius: 1rem;
   border: 4px double #cbb89d;
   margin-top: 2rem;
@@ -267,63 +201,50 @@ function Home() {
   return (
     <>
       <Section>
-        {/* Left - Book */}
         <LeftPanel>
           <AboutText>
             <h1>Hello, I'm Chandini!</h1>
             <p>
-              I'm a student at the University of Illinois at Urbana-Champaign majoring in 
-              Computer Science and Anthropology passionate about cybersecurity and software engineering. 
-              This is my portfolio, built with love and a little creativity. Click on the buttons to the
-              right to explore more!
+              I'm a student at UIUC majoring in Computer Science + Anthropology, passionate about cybersecurity and software engineering.
             </p>
           </AboutText>
         </LeftPanel>
-
-        {/* Right - Shelf */}
         <RightPanel>
           <ButtonContainer>
             <Button style={{ top: '73px', left: '17%' }} onClick={() => {
-              const el = document.getElementById('experience');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}></Button>
-
-            <Button style={{ top: '267px', left: '17%' }} onClick={() => console.log('Experience')} />
-            <Button style={{ top: '462px', left: '17%' }} onClick={() => console.log('Certifications')} />
+              document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
+            }} />
+            <Button style={{ top: '267px', left: '17%' }} onClick={() => {
+              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            }} />
+            <Button style={{ top: '462px', left: '17%' }} onClick={() => {
+              document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' });
+            }} />
           </ButtonContainer>
         </RightPanel>
-        </Section>
+      </Section>
+
       <Experience />
       <Projects />
       <Certifications />
     </>
-
   );
 }
-
 
 function Experience() {
   return (
     <ExperienceSection id="experience">
-      <h2 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>
-        📖 My Chronicle of Experience
-      </h2>
-
+      <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
       <Timeline>
         <Entry>
           <Year>2024</Year>
-          <Role>Examples</Role>
-          <Description>
-            Built threat monitoring scripts, analyzed network logs, and contributed to vulnerability assessments.
-          </Description>
+          <Role>Cybersecurity Intern @ SecureNet</Role>
+          <Description>Worked on network logs and vulnerability assessments.</Description>
         </Entry>
-
         <Entry>
           <Year>2023</Year>
-          <Role> Sales Partner @ Brighton Collectibles</Role>
-          <Description>
-            Sales stuff!
-          </Description>
+          <Role>Sales Partner @ Brighton Collectibles</Role>
+          <Description>Sales and customer engagement role.</Description>
         </Entry>
       </Timeline>
     </ExperienceSection>
@@ -333,21 +254,19 @@ function Experience() {
 function Projects() {
   return (
     <ProjectsSection id="projects">
-      <h2 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>
-        🧪 Projects
-      </h2>
+      <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
       <ProjectGrid>
         <ProjectCard>
-          <h3>PrarieLearn Extention</h3>
-          <p>A React-based app with 2FA and secure session handling.</p>
+          <h3>PrairieLearn Extension</h3>
+          <p>Chrome extension to organize and sort PL content.</p>
         </ProjectCard>
         <ProjectCard>
           <h3>Ad Sentiment Analyzer</h3>
-          <p>Classifies user sentiment from ad comments using Python NLP.</p>
+          <p>Python NLP pipeline for targeted ad feedback.</p>
         </ProjectCard>
         <ProjectCard>
           <h3>Dropout Predictor</h3>
-          <p>Used decision trees to analyze and predict high school dropout rates.</p>
+          <p>Used decision trees to analyze dropout rates.</p>
         </ProjectCard>
       </ProjectGrid>
     </ProjectsSection>
@@ -357,9 +276,7 @@ function Projects() {
 function Certifications() {
   return (
     <CertificationsSection id="certifications">
-      <h2 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '2rem' }}>
-        🎖️ Certifications
-      </h2>
+      <h2 style={{ textAlign: 'center' }}>🎖️ Certifications</h2>
       <CertList>
         <CertItem>ISC² Certified in Cybersecurity</CertItem>
         <CertItem>Google IT Support Professional Certificate</CertItem>
