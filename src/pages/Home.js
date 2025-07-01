@@ -21,6 +21,15 @@ const Section = styled.section`
   }
 `;
 
+const SectionWrapper = styled.div`
+  background-color: #f8f4ed;
+  padding: 4rem 2rem;
+  margin: 0;
+  border-top: 2px solid #d7c6b4;
+`;
+
+
+
 const LeftPanel = styled.div`
   width: 100%;
   padding: 2rem;
@@ -146,7 +155,7 @@ function Home() {
 
 function Experience() {
   return (
-    <ExperienceSection id="experience">
+    <SectionWrapper id="experience">
       <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
       <Timeline>
         <Entry>
@@ -160,13 +169,13 @@ function Experience() {
           <Description>Sales and customer engagement role.</Description>
         </Entry>
       </Timeline>
-    </ExperienceSection>
+    </SectionWrapper>
   );
 }
 
 function Projects() {
   return (
-    <ProjectsSection id="projects">
+    <SectionWrapper id="projects">
       <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
       <ProjectGrid>
         <ProjectCard>
@@ -182,19 +191,19 @@ function Projects() {
           <p>Used decision trees to analyze dropout rates.</p>
         </ProjectCard>
       </ProjectGrid>
-    </ProjectsSection>
+    </SectionWrapper>
   );
 }
 
 function Certifications() {
   return (
-    <CertificationsSection id="certifications">
+    <SectionWrapper id="certifications">
       <h2 style={{ textAlign: 'center' }}>🎖️ Certifications</h2>
       <CertList>
         <CertItem>ISC² Certified in Cybersecurity</CertItem>
         <CertItem>Google IT Support Professional Certificate</CertItem>
       </CertList>
-    </CertificationsSection>
+    </SectionWrapper>
   );
 }
 
