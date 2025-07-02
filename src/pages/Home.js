@@ -111,6 +111,71 @@ const AboutText = styled.div`
   }
 `;
 
+const ExperienceSection = styled.section`
+  padding: 2rem 0;
+`;
+
+const Timeline = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+const Entry = styled.div`
+  background: #fff6f0;
+  border-left: 4px solid #a57550;
+  padding: 1rem;
+  margin: 0 2rem;
+  border-radius: 8px;
+`;
+
+const Year = styled.div`
+  font-weight: bold;
+`;
+
+const Role = styled.div`
+  font-style: italic;
+`;
+
+const Description = styled.p`
+  margin: 0.5rem 0 0;
+`;
+
+const ProjectsSection = styled.section`
+  padding: 2rem 0;
+`;
+
+const ProjectGrid = styled.div`
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const ProjectCard = styled.div`
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+  min-width: 260px;
+`;
+
+const CertificationsSection = styled.section`
+  padding: 2rem 0;
+`;
+
+const CertList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const CertItem = styled.li`
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+`;
+
+
 function Home() {
   return (
     <>
