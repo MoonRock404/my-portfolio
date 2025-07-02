@@ -117,29 +117,29 @@ const ExperienceSection = styled.section`
 `;
 
 const Timeline = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid #a57450;
 `;
 
 const Entry = styled.div`
-  background-color: rgba(255, 248, 240, 0.9);
-  border-left: 6px solid #a57450;
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
+  position: relative;
   margin-bottom: 2rem;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  padding-left: 1rem;
 
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  h3, p {
-    margin: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #a57450;
+    border-radius: 50%;
+    border: 2px solid #fff;
   }
 `;
+
 
 const Year = styled.h3`
   font-size: 1.2rem;
