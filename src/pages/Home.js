@@ -123,23 +123,42 @@ const Timeline = styled.div`
 `;
 
 const Entry = styled.div`
-  background: #fff6f0;
-  border-left: 4px solid #a57550;
-  padding: 1rem;
-  margin: 0 2rem;
-  border-radius: 8px;
+  background-color: rgba(255, 248, 240, 0.9);
+  border-left: 6px solid #a57450;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  h3, p {
+    margin: 0;
+  }
 `;
 
-const Year = styled.div`
+const Year = styled.h3`
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #3b2f2f;
+  margin-bottom: 0.25rem;
 `;
 
-const Role = styled.div`
+const Role = styled.p`
   font-style: italic;
+  font-weight: 600;
+  color: #5e4630;
+  margin-bottom: 0.5rem;
 `;
 
 const Description = styled.p`
-  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a3a2c;
 `;
 
 const ProjectsSection = styled.section`

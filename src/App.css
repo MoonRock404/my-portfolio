@@ -11,9 +11,29 @@ a {
   color: inherit;
 }
 
-h1, h2, h3 {
+h1, h3 {
   margin: 0;
 }
+
+h2 {
+  position: relative;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 120px;
+  height: 4px;
+  background: #bfa17f;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
 
 /* navbar */
 .navbar {
