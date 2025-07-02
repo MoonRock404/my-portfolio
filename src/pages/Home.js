@@ -162,24 +162,52 @@ const Description = styled.p`
 `;
 
 const ProjectsSection = styled.section`
-  padding: 2rem 0;
+  padding: 4rem 2rem;
+  background-color: #f8f4ed;
+  border-top: 2px solid #d7c6b4;
 `;
 
 const ProjectGrid = styled.div`
   display: flex;
-  gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 `;
 
 const ProjectCard = styled.div`
-  background: white;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: rgba(255, 248, 240, 0.95); /* parchment tone */
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 6px 6px 15px rgba(80, 50, 30, 0.1);
   max-width: 300px;
   min-width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #d7c6b4;
+  font-family: 'Georgia', serif;
+
+  &:hover {
+    transform: translateY(-8px) rotate(-0.5deg);
+    box-shadow: 10px 10px 25px rgba(80, 50, 30, 0.2);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #4a3a2c;
+    border-bottom: 2px solid #e4d2ba;
+    padding-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #5e4630;
+    margin: 0;
+  }
 `;
+
 
 const CertificationsSection = styled.section`
   padding: 2rem 0;
