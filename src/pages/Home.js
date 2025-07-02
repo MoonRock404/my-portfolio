@@ -156,19 +156,21 @@ function Home() {
 function Experience() {
   return (
     <SectionWrapper id="experience">
-      <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
-      <Timeline>
-        <Entry>
-          <Year>2024</Year>
-          <Role>Internship</Role>
-          <Description>Worked on network logs and vulnerability assessments.</Description>
-        </Entry>
-        <Entry>
-          <Year>2023</Year>
-          <Role>Sales Partner @ Brighton Collectibles</Role>
-          <Description>Sales and customer engagement role.</Description>
-        </Entry>
-      </Timeline>
+      <ExperienceSection id="experience">
+        <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
+        <Timeline>
+          <Entry>
+            <Year>2024</Year>
+            <Role>Internship</Role>
+            <Description>Worked on network logs and vulnerability assessments.</Description>
+          </Entry>
+          <Entry>
+            <Year>2023</Year>
+            <Role>Sales Partner @ Brighton Collectibles</Role>
+            <Description>Sales and customer engagement role.</Description>
+          </Entry>
+        </Timeline>
+      </ExperienceSection>
     </SectionWrapper>
   );
 }
@@ -176,21 +178,23 @@ function Experience() {
 function Projects() {
   return (
     <SectionWrapper id="projects">
-      <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
-      <ProjectGrid>
-        <ProjectCard>
-          <h3>PrairieLearn Extension</h3>
-          <p>Chrome extension to organize and sort PL content.</p>
-        </ProjectCard>
-        <ProjectCard>
-          <h3>Ad Sentiment Analyzer</h3>
-          <p>Python NLP pipeline for targeted ad feedback.</p>
-        </ProjectCard>
-        <ProjectCard>
-          <h3>Dropout Predictor</h3>
-          <p>Used decision trees to analyze dropout rates.</p>
-        </ProjectCard>
-      </ProjectGrid>
+      <ProjectsSection id="projects">
+        <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
+        <ProjectGrid>
+          <ProjectCard>
+            <h3>PrairieLearn Extension</h3>
+            <p>Chrome extension to organize and sort PL content.</p>
+          </ProjectCard>
+          <ProjectCard>
+            <h3>Ad Sentiment Analyzer</h3>
+            <p>Python NLP pipeline for targeted ad feedback.</p>
+          </ProjectCard>
+          <ProjectCard>
+            <h3>Dropout Predictor</h3>
+            <p>Used decision trees to analyze dropout rates.</p>
+          </ProjectCard>
+        </ProjectGrid>
+      </ProjectsSection>
     </SectionWrapper>
   );
 }
@@ -198,11 +202,13 @@ function Projects() {
 function Certifications() {
   return (
     <SectionWrapper id="certifications">
-      <h2 style={{ textAlign: 'center' }}>🎖️ Certifications</h2>
-      <CertList>
-        <CertItem>ISC² Certified in Cybersecurity</CertItem>
-        <CertItem>Google IT Support Professional Certificate</CertItem>
-      </CertList>
+      <CertificationsSection id="certifications">
+        <h2 style={{ textAlign: 'center' }}>🎖️ Certifications</h2>
+        <CertList>
+          <CertItem>ISC² Certified in Cybersecurity</CertItem>
+          <CertItem>Google IT Support Professional Certificate</CertItem>
+        </CertList>
+      </CertificationsSection>
     </SectionWrapper>
   );
 }
