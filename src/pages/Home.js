@@ -22,13 +22,14 @@ const Section = styled.section`
 `;
 
 const SectionWrapper = styled.div`
-  background-color: #f8f4ed;
+  background-image: url("${process.env.PUBLIC_URL}/assets/vintage-page.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat; /* Or no-repeat if you want it fixed per section */
   padding: 4rem 2rem;
   margin: 0;
   border-top: 2px solid #d7c6b4;
 `;
-
-
 
 const LeftPanel = styled.div`
   width: 100%;
