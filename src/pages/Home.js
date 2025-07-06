@@ -76,11 +76,13 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
   position: absolute;
-  left: 50%;                 /* center horizontally */
-  bottom: 2rem;              /* pin 2 rem from the bottom */
+  left: 50%;
+  bottom: 2rem;
   transform: translateX(-50%);
 
-  width: 440px;              /* fixed width */
+  width: 440px;
+  min-width: 440px;
+  max-width: 440px;
   height: 105px;
 
   background: rgba(165, 117, 80, 0.2);
@@ -93,13 +95,7 @@ const Button = styled.button`
     transform: translateX(-50%) scale(1.05);
     background: rgba(165, 117, 80, 0.3);
   }
-
-  /* Optional: narrow only on very small screens */
-  @media (max-width: 480px) {
-    width: 320px;
-  }
 `;
-
 
 const AboutText = styled.div`
   background-color: rgba(255, 248, 240, 0.8);
