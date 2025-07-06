@@ -75,14 +75,13 @@ const ButtonContainer = styled.div`
 `;
 
 const Button = styled.button`
-  position: absolute;           /* stays on top of whatever parent is */
-  left: 50%;                    /* center horizontally */
-  top: 50%;                     /* center vertically  */
-  transform: translate(-50%, -50%);
-  
-  /* fluid width/height — never smaller than 180 px, never larger than 440 px */
-  width: clamp(180px, 40vw, 440px);
-  height: clamp(60px, 9vw, 105px);
+  position: absolute;
+  left: 50%;                 /* center horizontally */
+  bottom: 2rem;              /* pin 2 rem from the bottom */
+  transform: translateX(-50%);
+
+  width: 440px;              /* fixed width */
+  height: 105px;
 
   background: rgba(165, 117, 80, 0.2);
   border: none;
@@ -91,8 +90,13 @@ const Button = styled.button`
   transition: transform 0.2s, background 0.2s;
 
   &:hover {
-    transform: translate(-50%, -50%) scale(1.05);
+    transform: translateX(-50%) scale(1.05);
     background: rgba(165, 117, 80, 0.3);
+  }
+
+  /* Optional: narrow only on very small screens */
+  @media (max-width: 480px) {
+    width: 320px;
   }
 `;
 
