@@ -273,14 +273,21 @@ function Experience() {
         <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
         <Timeline>
           <Entry>
-            <Year>2024</Year>
-            <Role>Internship</Role>
-            <Description>Worked on network logs and vulnerability assessments.</Description>
+            <h3>ThinkNeuro - Summer Research Intern <span>| Remote</span></h3>
+            <p><strong>June 2025 – August 2025</strong></p>
+            <ul>
+              <li>Utilized R and the Bibliometrix package to conduct bibliometric analysis on neuroscience literature, identifying influential research trends and key contributors in the field of brain-computer interfaces and neuroprosthetics</li>
+              <li>Gained hands-on experience navigating the Web of Science database to collect, clean, and analyze citation data for research synthesis and visualization</li>
+              <li>Collaborated with a research team to develop a publishable abstract and e-poster, presenting data-driven findings at a virtual neuroscience symposium</li>
+            </ul>
           </Entry>
           <Entry>
-            <Year>2023</Year>
-            <Role>Sales Partner @ Brighton Collectibles</Role>
-            <Description>Sales and customer engagement role.</Description>
+              <h3>Brighton Collectables - Sales Partner <span>| California, CA</span></h3>
+              <p><strong>August 2023 – July 2024</strong></p>
+              <ul>
+                <li>Operated point-of-sale (POS) systems to efficiently process transactions, support team collaboration, drive sales performance, and uphold visual merchandising standards</li>
+                <li>Managed and analyzed sales data using Excel functions and visualizations to identify trends, track performance, and generate actionable reports for strategic decision-making</li>
+              </ul>
           </Entry>
         </Timeline>
       </ExperienceSection>
@@ -295,16 +302,31 @@ function Projects() {
         <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
         <ProjectGrid>
           <ProjectCard>
-            <h3>PrairieLearn Extension</h3>
-            <p>Chrome extension to organize and sort PL content.</p>
+            <h3>PrairieLearn Chrome Extension <span>| Women in Computer Science, UIUC</span></h3>
+            <ul>
+              <li>Developed a Chrome extension in JavaScript that dynamically scraped and sorted PrairieLearn assignments by due date across courses using <code>fetch</code>, <code>DOMParser</code>, and asynchronous logic</li>
+              <li>Applied modular design and DOM manipulation techniques to build a maintainable, user‑focused UI enhancement for the platform</li>
+              <li>Placed 3rd out of 12 teams in a club showcase; received faculty and CEO feedback, resulting in an official feature request submitted to PrairieLearn’s open‑source GitHub repository</li>
+              <li><strong>Utilized:</strong> JavaScript, Chrome Extensions API (MV3, Content Scripts, Action API), Fetch API, DOMParser, Git/GitHub</li>
+            </ul>
           </ProjectCard>
+
           <ProjectCard>
-            <h3>Ad Sentiment Analyzer</h3>
-            <p>Python NLP pipeline for targeted ad feedback.</p>
+            <h3>High School Dropout Rates <span>| Data Science Club, UIUC</span></h3>
+            <ul>
+              <li>Engineered a clean, balanced dataset by encoding categorical variables, imputing missing values, and applying SMOTE to address class imbalance, enabling reliable decision‑tree training</li>
+              <li>Tuned and evaluated a <code>DecisionTreeClassifier</code> using cross‑validation and classification metrics; incorporated industry feedback to refine feature engineering, boosting model accuracy by 15%</li>
+              <li><strong>Utilized:</strong> Python, pandas, Matplotlib, scikit‑learn</li>
+            </ul>
           </ProjectCard>
+
           <ProjectCard>
-            <h3>Dropout Predictor</h3>
-            <p>Used decision trees to analyze dropout rates.</p>
+            <h3>Sell My Dry Shampoo <span>| Dublin High School, CA</span></h3>
+            <ul>
+              <li>Scraped and exported user reviews using Jsoup, then applied automated keyword filtering for sentiment analysis and pattern identification to support ad‑targeting systems</li>
+              <li>Developed a recommendation system leveraging user feedback and keyword analysis, increasing ad relevance by 85 % through personalized content aligned with customer preferences</li>
+              <li><strong>Utilized:</strong> Java, Jsoup</li>
+            </ul>
           </ProjectCard>
         </ProjectGrid>
       </ProjectsSection>
