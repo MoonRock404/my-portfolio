@@ -71,15 +71,13 @@ const RightPanel = styled.div`
 const ButtonContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 700px; /* or whatever height fits all buttons */
 `;
 
 const Button = styled.button`
-  display: block;
-  margin: 2rem auto; /* centers horizontally within its container */
+  position: absolute;
 
-  width: 100%;
-  max-width: 440px;
+  width: 440px;
   height: 105px;
 
   background: rgba(165, 117, 80, 0.2);
