@@ -249,29 +249,20 @@ function Home() {
 
         <RightPanel>
           <ButtonContainer>
-            <Button style={{ top: '73px', left: '17%' }} onClick={() => {
-              const el = document.getElementById('experience');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}></Button>
-
-            <Button style={{ top: '267px', left: '17%' }} onClick={() => {
-              const el = document.getElementById('projects');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }} />
-
-            <Button style={{ top: '462px', left: '17%' }} onClick={() => {
-              const el = document.getElementById('certifications');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }} />
+            <Button style={{ top: '70px', left: '17%' }} onClick={() => console.log('Projects')} />
+            <Button style={{ top: '265px', left: '17%' }} onClick={() => console.log('Experience')} />
+            <Button style={{ top: '460px', left: '17%' }} onClick={() => console.log('Certifications')} />
           </ButtonContainer>
         </RightPanel>
       </Section>
+
       <Experience />
       <Projects />
       <Certifications />
     </>
   );
 }
+
 
 function Experience() {
   return (
