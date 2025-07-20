@@ -75,13 +75,10 @@ const ButtonContainer = styled.div`
 `;
 
 const Button = styled.button`
-  position: absolute;
-  left: 50%;
-  bottom: 2rem;
-  transform: translateX(-50%);
+  display: block;
+  margin: 2rem auto; /* centers horizontally within its container */
 
-  width: 440px;
-  min-width: 440px;
+  width: 100%;
   max-width: 440px;
   height: 105px;
 
@@ -91,11 +88,16 @@ const Button = styled.button`
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
 
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #4a3a2c;
+
   &:hover {
-    transform: translateX(-50%) scale(1.05);
+    transform: scale(1.05);
     background: rgba(165, 117, 80, 0.3);
   }
 `;
+
 
 const AboutText = styled.div`
   background-color: rgba(255, 248, 240, 0.8);
