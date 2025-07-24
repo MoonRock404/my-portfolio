@@ -77,8 +77,8 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   position: absolute;
 
-  width: 600px; /* longer button */
-  height: 105px;
+  width: 750px; 
+  height: 130px;
 
   background: rgba(165, 117, 80, 0.2);
   border: none;
