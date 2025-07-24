@@ -77,7 +77,7 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   position: absolute;
 
-  width: 440px;
+  width: 600px; /* longer button */
   height: 105px;
 
   background: rgba(165, 117, 80, 0.2);
@@ -87,7 +87,7 @@ const Button = styled.button`
   transition: transform 0.2s, background 0.2s;
 
   font-family: 'Georgia', serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #4a3a2c;
 
   &:hover {
@@ -95,6 +95,7 @@ const Button = styled.button`
     background: rgba(165, 117, 80, 0.3);
   }
 `;
+
 
 
 const AboutText = styled.div`
