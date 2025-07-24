@@ -126,27 +126,71 @@ const ExperienceSection = styled.section`
 
 const Timeline = styled.div`
   position: relative;
-  padding-left: 2rem;
-  border-left: 3px solid #a57450;
+  padding-left: 3rem;
+  border-left: 5px dashed #a57450;
+  background: linear-gradient(180deg, rgba(248, 244, 237, 0.8), rgba(255, 250, 240, 0.9));
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
 `;
 
 const Entry = styled.div`
+  background: rgba(255, 248, 240, 0.9);
+  border-left: 6px solid #a57450;
+  border-right: 6px solid #a57450;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(80, 50, 30, 0.15);
   position: relative;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px) rotate(-0.5deg);
+    box-shadow: 0 12px 30px rgba(80, 50, 30, 0.25);
+  }
 
   &::before {
-    content: '';
+    content: '📜';
     position: absolute;
-    left: -12px;
-    top: 10px;
-    width: 12px;
-    height: 12px;
-    background-color: #a57450;
-    border-radius: 50%;
-    border: 2px solid #fff;
+    left: -2.5rem;
+    top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #3b2f2f;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #5e4630;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 1rem;
+
+    li::before {
+      content: '✦ ';
+      color: #a57450;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    li {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #4a3a2c;
+    }
   }
 `;
+
 
 
 const Year = styled.h3`
