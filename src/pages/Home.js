@@ -77,7 +77,7 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   position: absolute;
 
-  width: 750px; 
+  width: 700px; 
   height: 130px;
 
   background: rgba(165, 117, 80, 0.2);
@@ -265,15 +265,48 @@ const CertificationsSection = styled.section`
   padding: 2rem 0;
 `;
 
-const CertList = styled.ul`
-  list-style: none;
-  padding: 0;
+const FancyCertGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 `;
 
-const CertItem = styled.li`
-  padding: 0.5rem 0;
-  font-size: 1.1rem;
+const CertCard = styled.div`
+  background: rgba(255, 248, 240, 0.95);
+  border: 2px solid #d7c6b4;
+  border-radius: 16px;
+  box-shadow: 6px 6px 15px rgba(80, 50, 30, 0.1);
+  max-width: 320px;
+  min-width: 260px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Georgia', serif;
+
+  &:hover {
+    transform: translateY(-6px) rotate(-0.5deg);
+    box-shadow: 10px 10px 25px rgba(80, 50, 30, 0.2);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #4a3a2c;
+    font-weight: bold;
+    border-bottom: 2px dashed #e4d2ba;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #5e4630;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+  }
 `;
+
 
 
 function Home() {
@@ -294,9 +327,9 @@ function Home() {
 
         <RightPanel>
           <ButtonContainer>
-            <Button style={{ top: '70px', left: '17%' }} onClick={() => console.log('Projects')} />
+            <Button style={{ top: '50px', left: '17%' }} onClick={() => console.log('Projects')} />
             <Button style={{ top: '265px', left: '17%' }} onClick={() => console.log('Experience')} />
-            <Button style={{ top: '460px', left: '17%' }} onClick={() => console.log('Certifications')} />
+            <Button style={{ top: '490px', left: '17%' }} onClick={() => console.log('Certifications')} />
           </ButtonContainer>
         </RightPanel>
       </Section>
@@ -381,14 +414,21 @@ function Certifications() {
   return (
     <SectionWrapper id="certifications">
       <CertificationsSection id="certifications">
-        <h2 style={{ textAlign: 'center' }}>🎖️ Certifications</h2>
-        <CertList>
-          <CertItem>ISC² Certified in Cybersecurity</CertItem>
-          <CertItem>Google IT Support Professional Certificate</CertItem>
-        </CertList>
+        <h2 style={{ textAlign: 'center' }}>🎖️ My Collection of Certifications</h2>
+        <FancyCertGrid>
+          <CertCard>
+            <h3>📜 ISC² Certified in Cybersecurity</h3>
+            <p>A foundational credential demonstrating knowledge in key cybersecurity principles, awarded by (ISC)².</p>
+          </CertCard>
+          <CertCard>
+            <h3>💻 Google IT Support Professional Certificate</h3>
+            <p>Industry-recognized certificate covering troubleshooting, customer service, networking, system administration, and security.</p>
+          </CertCard>
+        </FancyCertGrid>
       </CertificationsSection>
     </SectionWrapper>
   );
 }
+
 
 export default Home;
