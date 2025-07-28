@@ -80,7 +80,7 @@ const Button = styled.button`
   width: 550px; 
   height: 135px;
 
-  background: rgba(165, 117, 80, 0.2);
+  background: transparent;
   border: none;
   border-radius: 8px;
   cursor: pointer;
