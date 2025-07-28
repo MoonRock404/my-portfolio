@@ -330,8 +330,6 @@ const CertCard = styled.div`
   }
 `;
 
-
-
 function Home() {
   return (
     <>
@@ -352,15 +350,15 @@ function Home() {
           <ButtonContainer>
             <Button
               style={{ top: '45px', left: '18%' }}
-              onClick={() => document.getElementById('combined-showcase')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('experience-subsection')?.scrollIntoView({ behavior: 'smooth' })}
             />
             <Button
               style={{ top: '265px', left: '18%' }}
-              onClick={() => document.getElementById('combined-showcase')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('projects-subsection')?.scrollIntoView({ behavior: 'smooth' })}
             />
             <Button
               style={{ top: '490px', left: '18%' }}
-              onClick={() => document.getElementById('combined-showcase')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('certifications-subsection')?.scrollIntoView({ behavior: 'smooth' })}
             />
           </ButtonContainer>
         </RightPanel>
@@ -371,11 +369,12 @@ function Home() {
   );
 }
 
+
 function CombinedShowcase() {
   return (
     <MainContent>
       <FadeSection id="combined-showcase">
-        <ExperienceSection>
+        <ExperienceSection id="experience-subsection">
           <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
           <Timeline>
             <Entry>
@@ -398,7 +397,7 @@ function CombinedShowcase() {
           </Timeline>
         </ExperienceSection>
 
-        <ProjectsSection>
+        <ProjectsSection id="projects-subsection">
           <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
           <ProjectGrid>
             <ProjectCard>
@@ -429,7 +428,7 @@ function CombinedShowcase() {
           </ProjectGrid>
         </ProjectsSection>
 
-        <CertificationsSection>
+        <CertificationsSection id="certifications-subsection">
           <h2 style={{ textAlign: 'center' }}>🎖️ My Collection of Certifications</h2>
           <FancyCertGrid>
             <CertCard>
