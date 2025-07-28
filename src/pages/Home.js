@@ -77,7 +77,7 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   position: absolute;
 
-  width: 550px; 
+  width: 540px; 
   height: 135px;
 
   background: transparent;
@@ -328,17 +328,17 @@ function Home() {
         <RightPanel>
           <ButtonContainer>
             <Button
-              style={{ top: '45px', left: '17%' }}
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            />
-
-            <Button
-              style={{ top: '265px', left: '17%' }}
+              style={{ top: '45px', left: '18%' }}
               onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
             />
 
             <Button
-              style={{ top: '490px', left: '17%' }}
+              style={{ top: '265px', left: '18%' }}
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            />
+
+            <Button
+              style={{ top: '490px', left: '18%' }}
               onClick={() => document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' })}
             />
           </ButtonContainer>
