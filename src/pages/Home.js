@@ -21,15 +21,34 @@ const Section = styled.section`
   }
 `;
 
-const SectionWrapper = styled.div`
-  background-image: url("${process.env.PUBLIC_URL}/assets/vintage-page.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat; /* Or no-repeat if you want it fixed per section */
-  padding: 4rem 2rem;
-  margin: 0;
-  border-top: 2px solid #d7c6b4;
+const SectionWrapper = styled.section`
+  min-height: 100vh;
+  padding: 80px 10%;
+  background-color: #f8f4ed; /* same as your body background */
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease;
 `;
+
+import { motion } from 'framer-motion';
+
+const FadeSection = ({ children, id }) => (
+  <motion.section
+    id={id}
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    viewport={{ once: true }}
+    style={{
+      minHeight: '100vh',
+      padding: '80px 10%',
+      backgroundColor: '#f8f4ed',
+    }}
+  >
+    {children}
+  </motion.section>
+);
+
 
 const LeftPanel = styled.div`
   width: 100%;
@@ -96,6 +115,11 @@ const Button = styled.button`
   }
 `;
 
+const MainContent = styled.div`
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+`;
 
 
 const AboutText = styled.div`
@@ -355,89 +379,95 @@ function Home() {
 
 function Experience() {
   return (
-    <SectionWrapper id="experience">
-      <ExperienceSection id="experience">
-        <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
-        <Timeline>
-          <Entry>
-            <h3>ThinkNeuro - Summer Research Intern <span>| Remote</span></h3>
-            <p><strong>June 2025 – August 2025</strong></p>
-            <ul>
-              <li>Utilized R and the Bibliometrix package to conduct bibliometric analysis on neuroscience literature, identifying influential research trends and key contributors in the field of brain-computer interfaces and neuroprosthetics</li>
-              <li>Gained hands-on experience navigating the Web of Science database to collect, clean, and analyze citation data for research synthesis and visualization</li>
-              <li>Collaborated with a research team to develop a publishable abstract and e-poster, presenting data-driven findings at a virtual neuroscience symposium</li>
-            </ul>
-          </Entry>
-          <Entry>
-              <h3>Brighton Collectables - Sales Partner <span>| California, CA</span></h3>
-              <p><strong>August 2023 – July 2024</strong></p>
+    <MainContent>
+      <FadeSection id="experience">
+        <ExperienceSection id="experience">
+          <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
+          <Timeline>
+            <Entry>
+              <h3>ThinkNeuro - Summer Research Intern <span>| Remote</span></h3>
+              <p><strong>June 2025 – August 2025</strong></p>
               <ul>
-                <li>Operated point-of-sale (POS) systems to efficiently process transactions, support team collaboration, drive sales performance, and uphold visual merchandising standards</li>
-                <li>Managed and analyzed sales data using Excel functions and visualizations to identify trends, track performance, and generate actionable reports for strategic decision-making</li>
+                <li>Utilized R and the Bibliometrix package to conduct bibliometric analysis on neuroscience literature, identifying influential research trends and key contributors in the field of brain-computer interfaces and neuroprosthetics</li>
+                <li>Gained hands-on experience navigating the Web of Science database to collect, clean, and analyze citation data for research synthesis and visualization</li>
+                <li>Collaborated with a research team to develop a publishable abstract and e-poster, presenting data-driven findings at a virtual neuroscience symposium</li>
               </ul>
-          </Entry>
-        </Timeline>
-      </ExperienceSection>
-    </SectionWrapper>
+            </Entry>
+            <Entry>
+                <h3>Brighton Collectables - Sales Partner <span>| California, CA</span></h3>
+                <p><strong>August 2023 – July 2024</strong></p>
+                <ul>
+                  <li>Operated point-of-sale (POS) systems to efficiently process transactions, support team collaboration, drive sales performance, and uphold visual merchandising standards</li>
+                  <li>Managed and analyzed sales data using Excel functions and visualizations to identify trends, track performance, and generate actionable reports for strategic decision-making</li>
+                </ul>
+            </Entry>
+          </Timeline>
+        </ExperienceSection>
+      </FadeSection>
+    </MainContent>
   );
 }
 
 function Projects() {
   return (
-    <SectionWrapper id="projects">
-      <ProjectsSection id="projects">
-        <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
-        <ProjectGrid>
-          <ProjectCard>
-            <h3>PrairieLearn Chrome Extension <span>| Women in Computer Science, UIUC</span></h3>
-            <ul>
-              <li>Developed a Chrome extension in JavaScript that dynamically scraped and sorted PrairieLearn assignments by due date across courses using <code>fetch</code>, <code>DOMParser</code>, and asynchronous logic</li>
-              <li>Applied modular design and DOM manipulation techniques to build a maintainable, user‑focused UI enhancement for the platform</li>
-              <li>Placed 3rd out of 12 teams in a club showcase; received faculty and CEO feedback, resulting in an official feature request submitted to PrairieLearn’s open‑source GitHub repository</li>
-              <li><strong>Utilized:</strong> JavaScript, Chrome Extensions API (MV3, Content Scripts, Action API), Fetch API, DOMParser, Git/GitHub</li>
-            </ul>
-          </ProjectCard>
+    <MainContent>
+      <FadeSection id="projects">
+        <ProjectsSection id="projects">
+          <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
+          <ProjectGrid>
+            <ProjectCard>
+              <h3>PrairieLearn Chrome Extension <span>| Women in Computer Science, UIUC</span></h3>
+              <ul>
+                <li>Developed a Chrome extension in JavaScript that dynamically scraped and sorted PrairieLearn assignments by due date across courses using <code>fetch</code>, <code>DOMParser</code>, and asynchronous logic</li>
+                <li>Applied modular design and DOM manipulation techniques to build a maintainable, user‑focused UI enhancement for the platform</li>
+                <li>Placed 3rd out of 12 teams in a club showcase; received faculty and CEO feedback, resulting in an official feature request submitted to PrairieLearn’s open‑source GitHub repository</li>
+                <li><strong>Utilized:</strong> JavaScript, Chrome Extensions API (MV3, Content Scripts, Action API), Fetch API, DOMParser, Git/GitHub</li>
+              </ul>
+            </ProjectCard>
 
-          <ProjectCard>
-            <h3>High School Dropout Rates <span>| Data Science Club, UIUC</span></h3>
-            <ul>
-              <li>Engineered a clean, balanced dataset by encoding categorical variables, imputing missing values, and applying SMOTE to address class imbalance, enabling reliable decision‑tree training</li>
-              <li>Tuned and evaluated a <code>DecisionTreeClassifier</code> using cross‑validation and classification metrics; incorporated industry feedback to refine feature engineering, boosting model accuracy by 15%</li>
-              <li><strong>Utilized:</strong> Python, pandas, Matplotlib, scikit‑learn</li>
-            </ul>
-          </ProjectCard>
+            <ProjectCard>
+              <h3>High School Dropout Rates <span>| Data Science Club, UIUC</span></h3>
+              <ul>
+                <li>Engineered a clean, balanced dataset by encoding categorical variables, imputing missing values, and applying SMOTE to address class imbalance, enabling reliable decision‑tree training</li>
+                <li>Tuned and evaluated a <code>DecisionTreeClassifier</code> using cross‑validation and classification metrics; incorporated industry feedback to refine feature engineering, boosting model accuracy by 15%</li>
+                <li><strong>Utilized:</strong> Python, pandas, Matplotlib, scikit‑learn</li>
+              </ul>
+            </ProjectCard>
 
-          <ProjectCard>
-            <h3>Sell My Dry Shampoo <span>| Dublin High School, CA</span></h3>
-            <ul>
-              <li>Scraped and exported user reviews using Jsoup, then applied automated keyword filtering for sentiment analysis and pattern identification to support ad‑targeting systems</li>
-              <li>Developed a recommendation system leveraging user feedback and keyword analysis, increasing ad relevance by 85 % through personalized content aligned with customer preferences</li>
-              <li><strong>Utilized:</strong> Java, Jsoup</li>
-            </ul>
-          </ProjectCard>
-        </ProjectGrid>
-      </ProjectsSection>
-    </SectionWrapper>
+            <ProjectCard>
+              <h3>Sell My Dry Shampoo <span>| Dublin High School, CA</span></h3>
+              <ul>
+                <li>Scraped and exported user reviews using Jsoup, then applied automated keyword filtering for sentiment analysis and pattern identification to support ad‑targeting systems</li>
+                <li>Developed a recommendation system leveraging user feedback and keyword analysis, increasing ad relevance by 85 % through personalized content aligned with customer preferences</li>
+                <li><strong>Utilized:</strong> Java, Jsoup</li>
+              </ul>
+            </ProjectCard>
+          </ProjectGrid>
+        </ProjectsSection>
+      </FadeSection>
+    </MainContent>
   );
 }
 
 function Certifications() {
   return (
-    <SectionWrapper id="certifications">
-      <CertificationsSection id="certifications">
-        <h2 style={{ textAlign: 'center' }}>🎖️ My Collection of Certifications</h2>
-        <FancyCertGrid>
-          <CertCard>
-            <h3>📜 ISC² Certified in Cybersecurity</h3>
-            <p>A foundational credential demonstrating knowledge in key cybersecurity principles, awarded by (ISC)².</p>
-          </CertCard>
-          <CertCard>
-            <h3>💻 Google IT Support Professional Certificate</h3>
-            <p>Industry-recognized certificate covering troubleshooting, customer service, networking, system administration, and security.</p>
-          </CertCard>
-        </FancyCertGrid>
-      </CertificationsSection>
-    </SectionWrapper>
+    <MainContent>
+      <FadeSection id="certifications">
+        <CertificationsSection id="certifications">
+          <h2 style={{ textAlign: 'center' }}>🎖️ My Collection of Certifications</h2>
+          <FancyCertGrid>
+            <CertCard>
+              <h3>📜 ISC² Certified in Cybersecurity</h3>
+              <p>A foundational credential demonstrating knowledge in key cybersecurity principles, awarded by (ISC)².</p>
+            </CertCard>
+            <CertCard>
+              <h3>💻 Google IT Support Professional Certificate</h3>
+              <p>Industry-recognized certificate covering troubleshooting, customer service, networking, system administration, and security.</p>
+            </CertCard>
+          </FancyCertGrid>
+        </CertificationsSection>
+      </FadeSection>
+    </MainContent>
   );
 }
 
