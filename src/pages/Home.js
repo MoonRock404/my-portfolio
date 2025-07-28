@@ -7,6 +7,7 @@
 */
 
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Section = styled.section`
   display: flex;
@@ -29,8 +30,6 @@ const SectionWrapper = styled.section`
   scroll-behavior: smooth;
   transition: background-color 0.5s ease;
 `;
-
-import { motion } from 'framer-motion';
 
 const FadeSection = ({ children, id }) => (
   <motion.section
@@ -353,26 +352,98 @@ function Home() {
           <ButtonContainer>
             <Button
               style={{ top: '45px', left: '18%' }}
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('combined-showcase')?.scrollIntoView({ behavior: 'smooth' })}
             />
-
             <Button
               style={{ top: '265px', left: '18%' }}
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('combined-showcase')?.scrollIntoView({ behavior: 'smooth' })}
             />
-
             <Button
               style={{ top: '490px', left: '18%' }}
-              onClick={() => document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('combined-showcase')?.scrollIntoView({ behavior: 'smooth' })}
             />
           </ButtonContainer>
         </RightPanel>
       </Section>
 
-      <Experience />
-      <Projects />
-      <Certifications />
+      <CombinedShowcase />
     </>
+  );
+}
+
+function CombinedShowcase() {
+  return (
+    <MainContent>
+      <FadeSection id="combined-showcase">
+        <ExperienceSection>
+          <h2 style={{ textAlign: 'center' }}>📖 My Chronicle of Experience</h2>
+          <Timeline>
+            <Entry>
+              <h3>ThinkNeuro - Summer Research Intern <span>| Remote</span></h3>
+              <p><strong>June 2025 – August 2025</strong></p>
+              <ul>
+                <li>Utilized R and the Bibliometrix package to conduct bibliometric analysis on neuroscience literature...</li>
+                <li>Gained hands-on experience navigating the Web of Science database...</li>
+                <li>Collaborated with a research team to develop a publishable abstract...</li>
+              </ul>
+            </Entry>
+            <Entry>
+              <h3>Brighton Collectables - Sales Partner <span>| California, CA</span></h3>
+              <p><strong>August 2023 – July 2024</strong></p>
+              <ul>
+                <li>Operated point-of-sale systems, supported team collaboration...</li>
+                <li>Managed and analyzed sales data using Excel functions and visualizations...</li>
+              </ul>
+            </Entry>
+          </Timeline>
+        </ExperienceSection>
+
+        <ProjectsSection>
+          <h2 style={{ textAlign: 'center' }}>🧪 Projects</h2>
+          <ProjectGrid>
+            <ProjectCard>
+              <h3>PrairieLearn Chrome Extension <span>| Women in Computer Science, UIUC</span></h3>
+              <ul>
+                <li>Developed a Chrome extension in JavaScript...</li>
+                <li>Applied modular design and DOM manipulation techniques...</li>
+                <li>Placed 3rd out of 12 teams...</li>
+                <li><strong>Utilized:</strong> JavaScript, Chrome Extensions API, etc.</li>
+              </ul>
+            </ProjectCard>
+            <ProjectCard>
+              <h3>High School Dropout Rates <span>| Data Science Club, UIUC</span></h3>
+              <ul>
+                <li>Engineered a clean, balanced dataset...</li>
+                <li>Tuned and evaluated a DecisionTreeClassifier...</li>
+                <li><strong>Utilized:</strong> Python, pandas, scikit-learn</li>
+              </ul>
+            </ProjectCard>
+            <ProjectCard>
+              <h3>Sell My Dry Shampoo <span>| Dublin High School, CA</span></h3>
+              <ul>
+                <li>Scraped and exported user reviews using Jsoup...</li>
+                <li>Developed a recommendation system...</li>
+                <li><strong>Utilized:</strong> Java, Jsoup</li>
+              </ul>
+            </ProjectCard>
+          </ProjectGrid>
+        </ProjectsSection>
+
+        <CertificationsSection>
+          <h2 style={{ textAlign: 'center' }}>🎖️ My Collection of Certifications</h2>
+          <FancyCertGrid>
+            <CertCard>
+              <h3>📜 ISC² Certified in Cybersecurity</h3>
+              <p>A foundational credential demonstrating knowledge in key cybersecurity principles.</p>
+            </CertCard>
+            <CertCard>
+              <h3>💻 Google IT Support Professional Certificate</h3>
+              <p>Industry-recognized certificate covering troubleshooting, networking, and security.</p>
+            </CertCard>
+          </FancyCertGrid>
+        </CertificationsSection>
+      </FadeSection>
+    </MainContent>
   );
 }
 
