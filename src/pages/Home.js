@@ -327,9 +327,20 @@ function Home() {
 
         <RightPanel>
           <ButtonContainer>
-            <Button style={{ top: '45px', left: '17%' }} onClick={() => console.log('Projects')} />
-            <Button style={{ top: '265px', left: '17%' }} onClick={() => console.log('Experience')} />
-            <Button style={{ top: '490px', left: '17%' }} onClick={() => console.log('Certifications')} />
+            <Button
+              style={{ top: '45px', left: '17%' }}
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            />
+
+            <Button
+              style={{ top: '265px', left: '17%' }}
+              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+            />
+
+            <Button
+              style={{ top: '490px', left: '17%' }}
+              onClick={() => document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' })}
+            />
           </ButtonContainer>
         </RightPanel>
       </Section>
