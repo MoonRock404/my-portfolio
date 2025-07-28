@@ -77,7 +77,7 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   position: absolute;
 
-  width: 600px; 
+  width: 550px; 
   height: 135px;
 
   background: rgba(165, 117, 80, 0.2);
@@ -327,7 +327,7 @@ function Home() {
 
         <RightPanel>
           <ButtonContainer>
-            <Button style={{ top: '47px', left: '17%' }} onClick={() => console.log('Projects')} />
+            <Button style={{ top: '45px', left: '17%' }} onClick={() => console.log('Projects')} />
             <Button style={{ top: '265px', left: '17%' }} onClick={() => console.log('Experience')} />
             <Button style={{ top: '490px', left: '17%' }} onClick={() => console.log('Certifications')} />
           </ButtonContainer>
