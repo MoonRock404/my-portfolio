@@ -34,10 +34,10 @@ const SectionWrapper = styled.section`
   transition: background-color 0.5s ease;
 `;
 
-const FadeSection = forwardRef(({ children, id }, ref) => (
+const FadeSection = ({ children, id, innerRef }) => (
   <motion.section
     id={id}
-    ref={ref}
+    ref={innerRef}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -50,9 +50,7 @@ const FadeSection = forwardRef(({ children, id }, ref) => (
   >
     {children}
   </motion.section>
-));
-
-
+);
 
 const LeftPanel = styled.div`
   width: 100%;
@@ -420,7 +418,7 @@ function CombinedShowcase() {
     <ShowcaseWrapper>
       <StickyTitlePanel>{currentSection}</StickyTitlePanel>
       <ScrollableContentPanel>
-        <FadeSection id="experience-subsection" ref={expRef}>
+        <FadeSection id="experience-subsection" innerRef={expRef}>
           <ExperienceSection>
             <Timeline>
               <Entry>
