@@ -9,7 +9,6 @@
 import React, { useState, useEffect, forwardRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { forwardRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
