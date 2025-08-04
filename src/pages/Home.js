@@ -6,11 +6,11 @@
  npm run deploy
 */
 
+import React, { useState, useEffect, forwardRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { forwardRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { useState, useEffect } from 'react';
 
 const Section = styled.section`
   display: flex;
