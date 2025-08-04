@@ -24,15 +24,6 @@ const Section = styled.section`
   }
 `;
 
-const SectionWrapper = styled.section`
-  min-height: 100vh;
-  padding: 80px 10%;
-  background-color: #f8f4ed; /* same as your body background */
-  scroll-snap-align: start;
-  scroll-behavior: smooth;
-  transition: background-color 0.5s ease;
-`;
-
 const FadeSection = forwardRef(({ children, id }, ref) => (
   <div ref={ref}>
     <motion.section
@@ -116,13 +107,6 @@ const Button = styled.button`
     background: rgba(165, 117, 80, 0.3);
   }
 `;
-
-const MainContent = styled.div`
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-`;
-
 
 const AboutText = styled.div`
   background-color: rgba(255, 248, 240, 0.8);
@@ -244,28 +228,6 @@ const Entry = styled.div`
       color: #4a3a2c;
     }
   }
-`;
-
-
-
-const Year = styled.h3`
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #3b2f2f;
-  margin-bottom: 0.25rem;
-`;
-
-const Role = styled.p`
-  font-style: italic;
-  font-weight: 600;
-  color: #5e4630;
-  margin-bottom: 0.5rem;
-`;
-
-const Description = styled.p`
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #4a3a2c;
 `;
 
 const ProjectsSection = styled.section`
