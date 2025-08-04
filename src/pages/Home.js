@@ -34,23 +34,24 @@ const SectionWrapper = styled.section`
   transition: background-color 0.5s ease;
 `;
 
-const FadeSection = ({ children, id, innerRef }) => (
-  <motion.section
-    id={id}
-    ref={innerRef}
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, ease: 'easeOut' }}
-    viewport={{ once: true }}
-    style={{
-      minHeight: '100vh',
-      padding: '80px 10%',
-      backgroundColor: '#f8f4ed',
-    }}
-  >
-    {children}
-  </motion.section>
-);
+const FadeSection = forwardRef(({ children, id }, ref) => (
+  <div ref={ref}>
+    <motion.section
+      id={id}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      viewport={{ once: true }}
+      style={{
+        minHeight: '100vh',
+        padding: '80px 10%',
+        backgroundColor: '#f8f4ed',
+      }}
+    >
+      {children}
+    </motion.section>
+  </div>
+));
 
 const LeftPanel = styled.div`
   width: 100%;
@@ -404,9 +405,9 @@ function Home() {
 function CombinedShowcase() {
   const [currentSection, setCurrentSection] = useState('📖 My Chronicle of Experience');
 
-  const [expRef, inViewExp] = useInView({ threshold: 0.5 });
-  const [projRef, inViewProj] = useInView({ threshold: 0.5 });
-  const [certRef, inViewCert] = useInView({ threshold: 0.5 });
+  const { ref: expRef, inView: inViewExp } = useInView({ threshold: 0.5 });
+  const { ref: projRef, inView: inViewProj } = useInView({ threshold: 0.5 });
+  const { ref: certRef, inView: inViewCert } = useInView({ threshold: 0.5 });  
 
   useEffect(() => {
     if (inViewExp) setCurrentSection('📖 My Chronicle of Experience');
@@ -418,7 +419,7 @@ function CombinedShowcase() {
     <ShowcaseWrapper>
       <StickyTitlePanel>{currentSection}</StickyTitlePanel>
       <ScrollableContentPanel>
-        <FadeSection id="experience-subsection" innerRef={expRef}>
+        <FadeSection id="experience-subsection" ref={expRef}>
           <ExperienceSection>
             <Timeline>
               <Entry>
