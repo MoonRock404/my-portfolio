@@ -137,38 +137,24 @@ const NavigationButton = styled(motion.button)`
   width: min(450px, 80vw);
   height: 120px;
   background: ${theme.colors.overlay};
-  border: 2px solid ${theme.colors.lightAccent};
+  border: 2px solid ${theme.colors.border};
   border-radius: 12px;
-  cursor: pointer;
-  font-family: ${theme.fonts.serif};
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  font-weight: 600;
+  font-size: 2rem;
+  font-family: ${theme.fonts.title};
   color: ${theme.colors.text};
-  backdrop-filter: blur(5px);
-  box-shadow: 0 4px 15px rgba(80, 50, 30, 0.2);
-  
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: translate(-50%, -4px) scale(1.02);
     background: ${theme.colors.cardBg};
     box-shadow: 0 8px 25px rgba(80, 50, 30, 0.3);
     border-color: ${theme.colors.accent};
-  }  
-
-  &:active {
-    transform: translate(-50%, -2px) scale(1.01);
-  }
-
-  @media (max-width: ${theme.breakpoints.tablet}) {
-    position: relative;
-    width: 100%;
-    margin: 1rem 0;
   }
 `;
 
@@ -462,24 +448,26 @@ function Home() {
             <NavigationButton
               style={{ top: '10%', left: '50%', transform: 'translateX(-50%)' }}
               onClick={() => scrollToSection('experience-subsection')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.98, y: -2 }}
             >
               📖 Experience
             </NavigationButton>
+
             <NavigationButton
               style={{ top: '40%', left: '50%', transform: 'translateX(-50%)' }}
               onClick={() => scrollToSection('projects-subsection')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.98, y: -2 }}
             >
               🧪 Projects
             </NavigationButton>
+
             <NavigationButton
               style={{ top: '70%', left: '50%', transform: 'translateX(-50%)' }}
               onClick={() => scrollToSection('certifications-subsection')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.98, y: -2 }}
             >
               🎖️ Certifications
             </NavigationButton>
