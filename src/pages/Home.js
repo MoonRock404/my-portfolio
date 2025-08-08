@@ -446,28 +446,31 @@ function Home() {
         <RightPanel>
           <ButtonContainer>
             <NavigationButton
-              style={{ top: '10%', left: '50%', transform: 'translateX(-50%)' }}
+              style={{ top: '10%', left: '50%' }}
+              initial={{ x: '-50%' }}
+              whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
+              whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
               onClick={() => scrollToSection('experience-subsection')}
-              whileHover={{ scale: 1.05, y: -4 }}
-              whileTap={{ scale: 0.98, y: -2 }}
             >
               📖 Experience
             </NavigationButton>
 
             <NavigationButton
-              style={{ top: '40%', left: '50%', transform: 'translateX(-50%)' }}
+              style={{ top: '40%', left: '50%' }}
+              initial={{ x: '-50%' }}
+              whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
+              whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
               onClick={() => scrollToSection('projects-subsection')}
-              whileHover={{ scale: 1.05, y: -4 }}
-              whileTap={{ scale: 0.98, y: -2 }}
             >
               🧪 Projects
             </NavigationButton>
 
             <NavigationButton
-              style={{ top: '70%', left: '50%', transform: 'translateX(-50%)' }}
+              style={{ top: '70%', left: '50%' }}
+              initial={{ x: '-50%' }}
+              whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
+              whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
               onClick={() => scrollToSection('certifications-subsection')}
-              whileHover={{ scale: 1.05, y: -4 }}
-              whileTap={{ scale: 0.98, y: -2 }}
             >
               🎖️ Certifications
             </NavigationButton>
