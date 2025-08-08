@@ -155,14 +155,14 @@ const NavigationButton = styled(motion.button)`
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: translateY(-4px) scale(1.02);
+    transform: translate(-50%, -4px) scale(1.02);
     background: ${theme.colors.cardBg};
     box-shadow: 0 8px 25px rgba(80, 50, 30, 0.3);
     border-color: ${theme.colors.accent};
-  }
+  }  
 
   &:active {
-    transform: translateY(-2px) scale(1.01);
+    transform: translate(-50%, -2px) scale(1.01);
   }
 
   @media (max-width: ${theme.breakpoints.tablet}) {
