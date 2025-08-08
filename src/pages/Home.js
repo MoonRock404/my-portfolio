@@ -446,7 +446,7 @@ function Home() {
         <RightPanel>
           <ButtonContainer>
             <NavigationButton
-              style={{ top: '10%', left: '50%' }}
+              style={{ top: '7%', left: '50%' }}
               initial={{ x: '-50%' }}
               whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
               whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
@@ -456,7 +456,7 @@ function Home() {
             </NavigationButton>
 
             <NavigationButton
-              style={{ top: '40%', left: '50%' }}
+              style={{ top: '37%', left: '50%' }}
               initial={{ x: '-50%' }}
               whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
               whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
@@ -466,7 +466,7 @@ function Home() {
             </NavigationButton>
 
             <NavigationButton
-              style={{ top: '70%', left: '50%' }}
+              style={{ top: '69%', left: '50%' }}
               initial={{ x: '-50%' }}
               whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
               whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
