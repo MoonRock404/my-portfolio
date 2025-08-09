@@ -431,7 +431,7 @@ function Home() {
         <ButtonContainer>
             <NavigationButton
               aria-label="Scroll to experience"
-              style={{ top: '5%' }}
+              style={{ top: '5%', left: '50%' }}
               initial={{ x: 0 }}
               whileHover={{ scale: 1.05, y: -4 }}
               whileTap={{ scale: 0.98, y: -2 }}
