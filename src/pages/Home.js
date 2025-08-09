@@ -133,10 +133,13 @@ const ButtonContainer = styled.div`
 `;
 
 const NavigationButton = styled(motion.button)`
-  background: transparent !important;
-  border: none !important;
-  color: transparent !important;
-  box-shadow: none !important;
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  width: min(450px, 80vw); /* keep the clickable area size */
+  height: 120px;           /* adjust as needed */
 `;
 
 const AboutText = styled(motion.div)`
@@ -425,36 +428,33 @@ function Home() {
         </LeftPanel>
 
         <RightPanel>
-          <ButtonContainer>
+        <ButtonContainer>
             <NavigationButton
-              style={{ top: '5%', left: '50%' }}
-              initial={{ x: '-50%' }}
-              whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
-              whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
+              aria-label="Scroll to experience"
+              style={{ top: '5%' }}
+              initial={{ x: 0 }}
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.98, y: -2 }}
               onClick={() => scrollToSection('experience-subsection')}
-            >
-              📖 Experience
-            </NavigationButton>
+            />
 
             <NavigationButton
+              aria-label="Scroll to projects"
               style={{ top: '35%', left: '50%' }}
               initial={{ x: '-50%' }}
               whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
               whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
               onClick={() => scrollToSection('projects-subsection')}
-            >
-              🧪 Projects
-            </NavigationButton>
+            />
 
             <NavigationButton
+              aria-label="Scroll to certifications"
               style={{ top: '66%', left: '50%' }}
               initial={{ x: '-50%' }}
               whileHover={{ scale: 1.05, y: -4, x: '-50%' }}
               whileTap={{ scale: 0.98, y: -2, x: '-50%' }}
               onClick={() => scrollToSection('certifications-subsection')}
-            >
-              🎖️ Certifications
-            </NavigationButton>
+            />
           </ButtonContainer>
         </RightPanel>
       </Section>
