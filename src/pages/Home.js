@@ -133,29 +133,10 @@ const ButtonContainer = styled.div`
 `;
 
 const NavigationButton = styled(motion.button)`
-  position: absolute;
-  width: min(450px, 80vw);
-  height: 120px;
-  background: ${theme.colors.overlay};
-  border: 2px solid ${theme.colors.border};
-  border-radius: 12px;
-  font-size: 2rem;
-  font-family: ${theme.fonts.title};
-  color: ${theme.colors.text};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: ${theme.colors.cardBg};
-    box-shadow: 0 8px 25px rgba(80, 50, 30, 0.3);
-    border-color: ${theme.colors.accent};
-  }
+  background: transparent !important;
+  border: none !important;
+  color: transparent !important;
+  box-shadow: none !important;
 `;
 
 const AboutText = styled(motion.div)`
