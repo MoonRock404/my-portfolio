@@ -432,7 +432,7 @@ function Home() {
             <NavigationButton
               aria-label="Scroll to experience"
               style={{ top: '5%', left: '50%' }}
-              initial={{ x: 0 }}
+              initial={{ x: '-50%' }}
               whileHover={{ scale: 1.05, y: -4 }}
               whileTap={{ scale: 0.98, y: -2 }}
               onClick={() => scrollToSection('experience-subsection')}
