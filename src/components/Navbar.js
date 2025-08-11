@@ -13,7 +13,7 @@ const Navbar = () => {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "1rem 2rem",
-    background: "linear-gradient(90deg, #a47149, #6e4b3a)",
+    background: "linear-gradient(90deg, #bf8b62, #b3835d)",
     borderBottom: "3px solid #c4a484",
     position: "sticky",
     top: 0,
