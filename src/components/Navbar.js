@@ -56,8 +56,8 @@ const Navbar = () => {
       <div style={titleStyle}>Chandini's Portfolio</div>
       <ul style={navListStyle}>
         {[
-          { label: "Projects", id: "projects-subsection" },
           { label: "Experience", id: "experience-subsection" },
+          { label: "Projects", id: "projects-subsection" },
           { label: "Certifications", id: "certifications-subsection" },
         ].map((item) => (
           <li
