@@ -503,9 +503,11 @@ function CombinedShowcase() {
                 <h3>ThinkNeuro - Summer Research Intern <span>| Remote</span></h3>
                 <p><strong>June 2025 – August 2025</strong></p>
                 <ul>
-                  <li>Utilized R and the Bibliometrix package to conduct comprehensive bibliometric analysis on neuroscience literature</li>
-                  <li>Gained hands-on experience navigating the Web of Science database for academic research</li>
-                  <li>Collaborated with research team to develop publishable abstracts and research findings</li>
+                  <li>Utilized R and the Bibliometrix package to analyze 153 neuroscience papers from the Web of Science database,
+                    9 visualizations to identify influential research trends, key contributors, and the most effective
+                    brain-computer interface (BCI) approaches in neuroprosthetics</li>
+                  <li>Collaborated with a research team to synthesize findings into a publishable abstract and poster, presenting
+                    data-driven insights at a virtual neuroscience symposium</li>
                 </ul>
               </TimelineEntry>
               
@@ -515,12 +517,13 @@ function CombinedShowcase() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h3>Brighton Collectables - Sales Partner <span>| California, CA</span></h3>
-                <p><strong>August 2023 – July 2024</strong></p>
+                <h3>Brighton Collectables - Sales Partner <span>| Pleasanton, CA</span></h3>
+                <p><strong>August 2023 – August 2024</strong></p>
                 <ul>
-                  <li>Operated point-of-sale systems and supported seamless team collaboration</li>
-                  <li>Managed and analyzed sales data using advanced Excel functions and visualizations</li>
-                  <li>Provided exceptional customer service and product recommendations</li>
+                  <li>Operated point-of-sale (POS) systems to efficiently process transactions, support team collaboration, drive sales
+                    performance, and uphold visual merchandising standards</li>
+                  <li>Managed and analyzed sales data using Excel functions and visualizations to identify trends, track performance, and
+                    generate actionable reports for strategic decision-making</li>
                 </ul>
               </TimelineEntry>
             </Timeline>
@@ -538,10 +541,13 @@ function CombinedShowcase() {
               >
                 <h3>PrairieLearn Chrome Extension <span>| Women in Computer Science, UIUC</span></h3>
                 <ul>
-                  <li>Developed a Chrome extension in JavaScript to enhance learning platform functionality</li>
-                  <li>Applied modular design principles and DOM manipulation techniques</li>
-                  <li>Placed 3rd out of 12 teams in competitive development challenge</li>
-                  <li><strong>Tech Stack:</strong> JavaScript, Chrome Extensions API, HTML/CSS</li>
+                  <li>Developed a Chrome extension in JavaScript that dynamically scraped and sorted PrairieLearn assignments by due
+                    date across courses using fetch, DOMParser, and asynchronous logic</li>
+                  <li>Applied modular design and DOM manipulation techniques to build a maintainable, user-focused UI enhancement
+                    for the platform</li>
+                  <li>Placed 3rd out of 12 teams in a club showcase; received faculty and CEO feedback, resulting in an official feature
+                    request submitted to PrairieLearn’s open-source GitHub repository</li>
+                  <li><strong>Tech Stack:</strong> JavaScript, Chrome Extensions API (MV3, Content Scripts, Action API), Fetch API, DOMParser, Git/GitHub</li>
                 </ul>
               </Card>
               
@@ -553,9 +559,10 @@ function CombinedShowcase() {
               >
                 <h3>High School Dropout Analysis <span>| Data Science Club, UIUC</span></h3>
                 <ul>
-                  <li>Engineered clean, balanced dataset from raw educational statistics</li>
-                  <li>Tuned and evaluated DecisionTreeClassifier for predictive modeling</li>
-                  <li>Achieved 85% accuracy in identifying at-risk student populations</li>
+                  <li>Engineered a clean, balanced dataset by encoding categorical variables, imputing missing values, and applying
+                    SMOTE to address class imbalance, enabling reliable decision tree training</li>
+                  <li>Tuned and evaluated a DecisionTreeClassifier using cross-validation and classification metrics; incorporated industry
+                    feedback to refine feature engineering, boosting model accuracy by 15%</li>
                   <li><strong>Tech Stack:</strong> Python, pandas, scikit-learn, matplotlib</li>
                 </ul>
               </Card>
@@ -568,9 +575,10 @@ function CombinedShowcase() {
               >
                 <h3>Sell My Dry Shampoo <span>| Dublin High School, CA</span></h3>
                 <ul>
-                  <li>Scraped and processed user reviews using Jsoup for market analysis</li>
-                  <li>Developed intelligent recommendation system for beauty products</li>
-                  <li>Implemented sentiment analysis to gauge customer satisfaction</li>
+                  <li>Scraped and exported user reviews using Jsoup, then applied automated keyword filtering for sentiment analysis and
+                    pattern identification to support ad targeting systems</li>
+                  <li>Developed a recommendation system leveraging user feedback and keyword analysis, increasing ad relevance by
+                    85% through personalized content aligned with customer preferences</li>
                   <li><strong>Tech Stack:</strong> Java, Jsoup, JSON processing</li>
                 </ul>
               </Card>
@@ -581,24 +589,23 @@ function CombinedShowcase() {
         <FadeSection id="certifications-subsection" ref={certRef}>
           <ContentSection>
             <GridContainer>
+            <Card
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3> Google Cloud Data Analytics Certificate</h3>
+                <p>Demonstrated comprehensive knowledge in core data concepts, SQL, data modeling, transformation, and cloud-based visualization using BigQuery and Looker.</p>
+              </Card>
               <Card
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h3>📜 ISC² Certified in Cybersecurity</h3>
-                <p>A foundational credential demonstrating comprehensive knowledge in cybersecurity principles, risk management, and security best practices.</p>
-              </Card>
-              
-              <Card
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3>💻 Google IT Support Professional Certificate</h3>
-                <p>Industry-recognized certification covering advanced troubleshooting, networking fundamentals, system administration, and security protocols.</p>
+                <h3>ISC² Certified in Cybersecurity</h3>
+                <p>Demonstrated comprehensive knowledge in cybersecurity principles, risk management, and security best practices.</p>
               </Card>
             </GridContainer>
           </ContentSection>

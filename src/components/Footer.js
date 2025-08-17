@@ -27,9 +27,9 @@ const Footer = () => {
       <p>© {new Date().getFullYear()} Chandini's Portfolio</p>
       <div>
         {[
-          { label: "LinkedIn", url: "https://linkedin.com" },
-          { label: "GitHub", url: "https://github.com" },
-          { label: "Email", url: "mailto:youremail@example.com" },
+          { label: "LinkedIn", url: "www.linkedin.com/in/chandinichennakesavan" },
+          { label: "GitHub", url: "https://github.com/MoonRock404" },
+          { label: "Email", url: "mailto:chandinick7@gmail.com" },
         ].map((item) => (
           <a
             key={item.label}
