@@ -422,7 +422,7 @@ function Home() {
             <p>
               I'm a student at the University of Illinois at Urbana-Champaign majoring in 
               Computer Science and Anthropology, passionate about cybersecurity and software engineering. 
-              This is my portfolio, built with love and creativity. Explore my journey below!
+              This is my portfolio, explore my journey by clicking on the labels to the right!
             </p>
           </AboutText>
         </LeftPanel>
